@@ -1,46 +1,64 @@
 import React from 'react';
 import './App.css';
 import images from "./images.json";
-import Game from "./components/Game";
-
+// import Game from "./components/Game";
+import Card from "./components/Card";
+import Header from "./components/Header";
+import Wrapper from "./components/Wrapper";
 
 class App extends React.Component {
 
   state = {
-    images: images,
+    images,
     score: 0,
-    pastSelections: []
+    highscore: 0,
   }
 
-  handleCardClick = () => {
-    // check if inside pastSelections
-    // call correct or incorrect
+  gameOver = () => {
+    if (this.state.score > this.state.highscore) {
+      this.setState({highscore: this.state.score}, function() {
+        console.log(this.state.highscore);
+      });
+    }
+    this.state.images.forEach(image => {
+      image.count = 0;
+    });
+    alert(`Game Over :( \nscore: ${this.state.score}`);
+    this.setState({score: 0});
+    return true;
   }
 
-  correct = () => {
-    // score++
-    // message to user
-    // call shuffle
-  }
-
-  incorrect = () => {
-    // score back to 0
-    // message to user
-    // call shuffle
-  }
-
-  // shuffle can happen in the Game as it doesn't rely on a state
-  shuffle = () => {
-    // rearrange cards random
-    // set to state
+  clickCount = id => {
+    this.state.images.find((o, i) => {
+      if (o.id === id) {
+        if(images[i].count === 0){
+          images[i].count = images[i].count + 1;
+          this.setState({score : this.state.score + 1}, function(){
+            console.log(this.state.score);
+          });
+          this.state.images.sort(() => Math.random() - 0.5)
+          return true; 
+        } else {
+          this.gameOver();
+        }
+      }
+    });
   }
 
   render() {
-    console.log(images);
-    return ( <div className="App">
-      <Game cards={this.state.images}/>
-    </div>
-    )
+    return (
+      <Wrapper>
+        <Header score={this.state.score} highscore={this.state.highscore}>Clicky Game</Header>
+        {this.state.images.map(image => (
+          <Card
+            clickCount={this.clickCount}
+            id={image.id}
+            key={image.id}
+            image={image.url}
+          />
+        ))}
+      </Wrapper>
+    );
   };
 }
 

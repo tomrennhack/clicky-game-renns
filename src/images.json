@@ -1,8 +1,74 @@
 [
-    {"url":"/images/beth.png",
-    "id":1},
-    {"url":"/images/bird.png",
-    "id": 2},
-    {"url": "/images/evil.png",
-    "id": 3}
+    {
+        "name": "Bob",
+        "url":"/images/bob.png",
+        "id":1,
+        "count":0
+    },
+    {
+        "name": "Linda",
+        "url":"/images/linda.png",
+        "id":2,
+        "count":0
+    },
+    {
+        "name": "Tina",
+        "url": "/images/tina.png",
+        "id":3,
+        "count":0
+    },
+    {
+        "name": "Gene",
+        "url":"/images/gene.png",
+        "id":4,
+        "count":0
+    },
+    {
+        "name": "Louise",
+        "url":"/images/louise.png",
+        "id":5,
+        "count":0
+    },
+    {
+        "name": "Jimmy",
+        "url": "/images/jimmy.png",
+        "id":6,
+        "count":0
+    },
+    {
+        "name": "Jimmy Jr.",
+        "url":"/images/jimmyjr.png",
+        "id":7,
+        "count":0
+    },
+    {
+        "name": "Teddy",
+        "url":"/images/teddy.png",
+        "id":8,
+        "count":0
+    },
+    {
+        "name": "Gretchen",
+        "url": "/images/gretchen.png",
+        "id":9,
+        "count":0
+    },
+    {
+        "name": "Tammy",
+        "url":"/images/tammy.png",
+        "id":10,
+        "count":0
+    },
+    {
+        "name": "Little King Trashmouth",
+        "url":"/images/king.png",
+        "id":11,
+        "count":0
+    },
+    {
+        "name": "Speedo Guy",
+        "url": "/images/speedo.png",
+        "id":12,
+        "count":0
+    }
 ]
