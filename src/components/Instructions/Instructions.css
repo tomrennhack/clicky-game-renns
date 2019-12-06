@@ -1,0 +1,10 @@
+.instructions {
+    width: 100%;
+    font-size: 2vw;
+    font-weight: 500; 
+    color: rgb(81,50,164);
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding: 50px 0px;
+    text-align: center;
+  }

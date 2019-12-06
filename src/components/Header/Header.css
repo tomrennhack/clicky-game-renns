@@ -1,10 +1,12 @@
 .header {
     width: 100%;
-    font-size: 2rem;
+    font-size: 2vw;
     color: white;
     padding: 10px 0;
     background: rgb(81,50,164);
-    /* border-radius: 10px; */
+    box-shadow: 0 3px 6px #999;
+    z-index: 1;
+    position: fixed;
   }
   
   .title {
@@ -17,4 +19,9 @@
     float: right;
     margin-right: 10%;
     font-weight: 400;
+  }
+
+  .message {
+    float: left;
+    margin-left: 50px;
   }
