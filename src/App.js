@@ -3,6 +3,7 @@ import './App.css';
 import images from "./images.json";
 import Card from "./components/Card";
 import Header from "./components/Header";
+import Message from "./components/Message";
 import Wrapper from "./components/Wrapper";
 
 class App extends React.Component {
@@ -11,6 +12,7 @@ class App extends React.Component {
     images: images,
     score: 0,
     highscore: 0,
+    message: "Click on an image to earn points, but don't click on any more than once!"
   }
 
   endGame = () => {
@@ -22,7 +24,7 @@ class App extends React.Component {
     this.state.images.forEach(image => {
       image.count = 0;
     });
-    alert(`Game Over :( \nscore: ${this.state.score}`);
+    alert(`Game Over! \nYou scored ${this.state.score} out of 12. `);
     this.setState({score: 0});
     return true;
   }
@@ -47,7 +49,8 @@ class App extends React.Component {
   render() {
     return (
       <Wrapper>
-        <Header score={this.state.score} highscore={this.state.highscore}>Clicky Game</Header>
+        <Header score={this.state.score} highscore={this.state.highscore} message={this.state.message}>Clicky Game</Header>
+        <Message message={this.state.message} />
         {this.state.images.map(image => (
           <Card
             clickCount={this.clickCount}

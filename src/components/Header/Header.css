@@ -2,9 +2,9 @@
     width: 100%;
     font-size: 2rem;
     color: white;
-    margin-bottom: 20px;
-    background: rgb(255,50,50);
-    border-radius: 10px;
+    padding: 10px 0;
+    background: rgb(81,50,164);
+    /* border-radius: 10px; */
   }
   
   .title {
