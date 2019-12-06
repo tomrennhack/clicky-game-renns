@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import images from "./images.json";
+import Game from "./components/Game";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+class App extends React.Component {
+
+  state = {
+    images: images,
+    score: 0,
+    pastSelections: []
+  }
+
+  handleCardClick = () => {
+    // check if inside pastSelections
+    // call correct or incorrect
+  }
+
+  correct = () => {
+    // score++
+    // message to user
+    // call shuffle
+  }
+
+  incorrect = () => {
+    // score back to 0
+    // message to user
+    // call shuffle
+  }
+
+  // shuffle can happen in the Game as it doesn't rely on a state
+  shuffle = () => {
+    // rearrange cards random
+    // set to state
+  }
+
+  render() {
+    console.log(images);
+    return ( <div className="App">
+      <Game cards={this.state.images}/>
     </div>
-  );
+    )
+  };
 }
 
 export default App;
