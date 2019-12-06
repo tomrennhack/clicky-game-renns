@@ -24,7 +24,7 @@ class App extends React.Component {
     this.state.images.forEach(image => {
       image.count = 0;
     });
-    alert(`Game Over! \nYou scored ${this.state.score} out of 12. `);
+    this.setState({message: `Game Over! You scored ${this.state.score} out of 12... Click an image to begin again!`});
     this.setState({score: 0});
     return true;
   }
@@ -35,7 +35,10 @@ class App extends React.Component {
         if(images[i].count === 0){
           images[i].count = images[i].count + 1;
           this.setState({score : this.state.score + 1}, function(){
-            // console.log(this.state.score);
+            console.log(this.state.score);
+          });
+          this.setState({message: "Good click! Keep going!"}, function() {
+            console.log(this.state.message);
           });
           this.state.images.sort(() => Math.random() - 0.5)
           return true; 
