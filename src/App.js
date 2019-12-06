@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import images from "./images.json";
-// import Game from "./components/Game";
 import Card from "./components/Card";
 import Header from "./components/Header";
 import Wrapper from "./components/Wrapper";
@@ -9,12 +8,12 @@ import Wrapper from "./components/Wrapper";
 class App extends React.Component {
 
   state = {
-    images,
+    images: images,
     score: 0,
     highscore: 0,
   }
 
-  gameOver = () => {
+  endGame = () => {
     if (this.state.score > this.state.highscore) {
       this.setState({highscore: this.state.score}, function() {
         console.log(this.state.highscore);
@@ -34,12 +33,12 @@ class App extends React.Component {
         if(images[i].count === 0){
           images[i].count = images[i].count + 1;
           this.setState({score : this.state.score + 1}, function(){
-            console.log(this.state.score);
+            // console.log(this.state.score);
           });
           this.state.images.sort(() => Math.random() - 0.5)
           return true; 
         } else {
-          this.gameOver();
+          this.endGame();
         }
       }
     });
