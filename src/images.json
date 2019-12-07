@@ -19,19 +19,19 @@
     },
     {
         "name": "Gene",
-        "url":"images/gene.png",
+        "url":"public/images/gene.png",
         "id":4,
         "count":0
     },
     {
         "name": "Louise",
-        "url":"images/louise.png",
+        "url":"public/images/louise.png",
         "id":5,
         "count":0
     },
     {
         "name": "Jimmy",
-        "url": "images/jimmy.png",
+        "url": "/images/jimmy.png",
         "id":6,
         "count":0
     },
