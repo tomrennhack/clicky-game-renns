@@ -19,19 +19,19 @@
     },
     {
         "name": "Gene",
-        "url":"/images/gene.png",
+        "url":"images/gene.png",
         "id":4,
         "count":0
     },
     {
         "name": "Louise",
-        "url":"/images/louise.png",
+        "url":"images/louise.png",
         "id":5,
         "count":0
     },
     {
         "name": "Jimmy",
-        "url": "/images/jimmy.png",
+        "url": "images/jimmy.png",
         "id":6,
         "count":0
     },
@@ -43,7 +43,7 @@
     },
     {
         "name": "Teddy",
-        "url":"https://drive.google.com/open?id=17-J4oeQ9YHGuVSxyWeAxFcOuUJEtdH5P",
+        "url":"/images/teddy.png",
         "id":8,
         "count":0
     },
