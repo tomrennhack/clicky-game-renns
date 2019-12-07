@@ -25,8 +25,9 @@ class App extends React.Component {
     this.state.images.forEach(image => {
       image.count = 0;
     });
-    this.setState({message: `Game Over! You scored ${this.state.score}`});
+    this.setState({message: `Game Over! Click a picture to begin again!`});
     this.setState({score: 0});
+    alert(`Game Over! You scored ${this.state.score}`);
     return true;
   }
 
