@@ -19,13 +19,13 @@
     },
     {
         "name": "Gene",
-        "url":"public/images/gene.png",
+        "url":"/public/images/gene.png",
         "id":4,
         "count":0
     },
     {
         "name": "Louise",
-        "url":"public/images/louise.png",
+        "url":"/public/images/louise.png",
         "id":5,
         "count":0
     },
