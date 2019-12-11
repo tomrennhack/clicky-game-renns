@@ -8,5 +8,5 @@ You will receive messages in the header as you click through.
 
 Good luck!
 
---* [Github Repo](https://github.com/tomrennhack/clicky-game-renns)
---* [Deployed Page](https://tomrennhack.github.io/clicky-game-renns/)
+⋅⋅* [Github Repo](https://github.com/tomrennhack/clicky-game-renns)
+⋅⋅* [Deployed Page](https://tomrennhack.github.io/clicky-game-renns/)
